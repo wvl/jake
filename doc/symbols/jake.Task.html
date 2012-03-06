@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf8"></meta>
 		<meta name="generator" content="JsDoc Toolkit"></meta>
-		<title>jake | JsDoc Reference</title>
+		<title>jake.Task | JsDoc Reference</title>
 
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"></meta>
 		<meta name="mobileoptimized" content="0"></meta>
@@ -65,12 +65,12 @@
 	<div class="innerContent">
 		<h1 class="classTitle">
 			
-			Namespace <span>jake</span>
+			Class <span>jake.Task</span>
 		</h1>
 		
 		<div class="intro">
 			<p class="description summary">
-				jake
+				
 			</p>
 				
 			
@@ -78,17 +78,19 @@
 					
 					
 					
-						<li>Defined in: <a href="../symbols/src/lib_package_task.js.html">package_task.js</a></li>
+						<li>Defined in: <a href="../symbols/src/lib_task_task.js.html">task.js</a></li>
 					
-						
+						<li>Extends <span class="fixedFont">
+						EventEmitter</span></li>
+					
 				</ul>
 			
 		</div>
 		
 		
 			<div class="props">
-				<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class jake.">
-					<caption class="sectionTitle">Namespace Summary</caption>
+				<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class jake.Task.">
+					<caption class="sectionTitle">Class Summary</caption>
 					<thead>
 						<tr>
 							<th scope="col">Constructor Attributes</th>
@@ -100,9 +102,9 @@
 							<td class="attributes">&nbsp;</td>
 							<td class="nameDescription" >
 								<div class="fixedFont">
-									<b><a href="../symbols/jake.html#constructor">jake</a></b>
+									<b><a href="../symbols/jake.Task.html#constructor">jake.Task</a></b>(name, [prereqs], [action], [opts])
 								</div>
-								<div class="description"></div>
+								<div class="description">A Jake Task</div>
 							</td>
 						</tr>
 					</tbody>
@@ -121,7 +123,7 @@
 				<h2 class="sectionTitle">Method Summary</h2>
 				
 				
-					<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class jake.">
+					<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class jake.Task.">
 						<thead>
 							<tr>
 								<th scope="col">Method Attributes</th>
@@ -135,12 +137,22 @@
 								<tr
 									 class='item0'
 								>
-									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="attributes">&nbsp;</td>
 									<td class="nameDescription">
-										<div class="fixedFont">jake.<b><a href="../symbols/jake.html#.exec">exec</a></b>(cmds, [callback], [opts])
+										<div class="fixedFont"><b><a href="../symbols/jake.Task.html#invoke">invoke</a></b>()
 										</div>
-										<div class="description">Executes shell-commands asynchronously with an optional
-    final callback.</div>
+										<div class="description">Runs prerequisites, then this task.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item1'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/jake.Task.html#reenable">reenable</a></b>()
+										</div>
+										<div class="description">Runs this task, without running any prerequisites.</div>
 									</td>
 								</tr>
 							
@@ -156,6 +168,37 @@
 #### EVENTS SUMMARY
 -->
 		
+			
+			
+			<div class="props">
+				<table class="summaryTable" cellspacing="0" summary="A summary of the events documented in the class jake.Task.">
+					<caption class="sectionTitle">Event Summary</caption>
+					
+					<thead>
+						<tr>
+							<th scope="col">Event Attributes</th>
+							<th scope="col">Event Name and Description</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						
+							<tr>
+								<td class="attributes">&nbsp;</td>
+								<td class="nameDescription">
+									<div class="fixedFont"><b><a href="../symbols/jake.Task.html#event:complete">complete</a></b>
+									</div>
+									<div class="description"></div>
+								</td>
+							</tr>
+						
+					</tbody>
+				</table>
+			</div>
+			
+			
+			
+		
 <!--
 #### CONSTRUCTOR DETAILS
 -->
@@ -163,20 +206,58 @@
 			<div class="details props">
 				<div class="innerProps">
 					<h2 class="sectionTitle" id="constructor">
-						Namespace Detail
+						Class Detail
 					</h2>
 					
 					<div class="fixedFont">
-						<b>jake</b>
+						<b>jake.Task</b>(name, [prereqs], [action], [opts])
 					</div>
 					
 					<div class="description">
-						
+						A Jake Task
 						
 					</div>
 					
 					
 				
+					
+						<dl class="detailList params">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span>  <b>name</b>
+									
+								</dt>
+								<dd>The name of the Task</dd>
+							
+								<dt>
+									<span class="light fixedFont">{Array}</span>  <b>prereqs</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Prerequisites to be run before this task</dd>
+							
+								<dt>
+									<span class="light fixedFont">{Function}</span>  <b>action</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The action to perform for this task</dd>
+							
+								<dt>
+									<span class="light fixedFont">{Object}</span>  <b>opts</b>
+									<i>Optional</i>
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{Array}</span>  <b>opts.asyc</b>
+									<i>Optional, Default: false</i>
+								</dt>
+								<dd>Perform this task asynchronously.
+    If you flag a task with this option, you must call the global
+    `complete` method inside the task's action, for execution to proceed
+    to the next task.</dd>
+							
+						</dl>
 					
 					
 					
@@ -203,87 +284,57 @@
 							<li 
 								 class='item0'
 							>
-								<div class="fixedFont heading" id=".exec">
+								<div class="fixedFont heading" id="invoke">
 									<span class='lighter'>
-									&lt;static&gt; 
+									
 									</span>
 									
 									
 									
-									<span class="light">jake.</span><b>exec</b>(cmds, [callback], [opts])
+									<b>invoke</b>()
 								</div>
 								
 								<div class="description">
-									Executes shell-commands asynchronously with an optional
-    final callback.
-    `
+									Runs prerequisites, then this task. If the task has already
+    been run, will not run the task again.
 									
-									
-										<br />
-										<i>Defined in: </i> <a href="../symbols/src/lib_utils_index.js.html">index.js</a>.
 									
 									
 									
 								</div>
 								
 								
+								
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item1'
+							>
+								<div class="fixedFont heading" id="reenable">
+									<span class='lighter'>
 									
-										<pre class="code">    var cmds = [
-          'echo "showing directories"'
-        , 'ls -al | grep ^d'
-        , 'echo "moving up a directory"'
-        , 'cd ../'
-        ]
-      , callback = function () {
-          console.log('Finished running commands.');
-        }
-    jake.exec(cmds, callback, {stdout: true});</pre>
+									</span>
 									
+									
+									
+									<b>reenable</b>()
+								</div>
+								
+								<div class="description">
+									Runs this task, without running any prerequisites. If the task
+    has already been run, it will still run it again.
+									
+									
+									
+									
+								</div>
 								
 								
 								
-									<dl class="detailList params">
-										<dt class="heading">Parameters:</dt>
-										
-											<dt>
-												<span class="light fixedFont">{String[]}</span> <b>cmds</b>
-												
-											</dt>
-											<dd>The list of shell-commands to execute</dd>
-										
-											<dt>
-												<span class="light fixedFont">{Function}</span> <b>callback</b>
-												<i>Optional</i>
-											</dt>
-											<dd>Callback to run after executing  the
-    commands</dd>
-										
-											<dt>
-												<span class="light fixedFont">{Object}</span> <b>opts</b>
-												<i>Optional</i>
-											</dt>
-											<dd></dd>
-										
-											<dt>
-												<span class="light fixedFont">{Boolean}</span> <b>opts.stdout</b>
-												<i>Optional, Default: false</i>
-											</dt>
-											<dd>Print stdout from each command</dd>
-										
-											<dt>
-												<span class="light fixedFont">{Boolean}</span> <b>opts.stderr</b>
-												<i>Optional, Default: false</i>
-											</dt>
-											<dd>Print stderr from each command</dd>
-										
-											<dt>
-												<span class="light fixedFont">{Boolean}</span> <b>opts.breakOnError</b>
-												<i>Optional, Default: true</i>
-											</dt>
-											<dd>Stop further execution on
-      the first error.</dd>
-										
-									</dl>
 								
 								
 								
@@ -298,6 +349,42 @@
 <!--
 #### EVENT DETAILS
 -->		
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Event Detail
+					</h2>
+					
+					
+						<div class="fixedFont heading" id="event:event:complete">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>complete</b>
+						</div>
+						
+						<div class="description">
+							
+							
+							
+							
+							
+						</div>
+						
+						
+						
+						
+						
+						
+						
+						
+					
+				</div>
+			</div>
 		
 	</div>
 </div>

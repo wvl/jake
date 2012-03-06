@@ -1,0 +1,686 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf8"></meta>
+		<meta name="generator" content="JsDoc Toolkit"></meta>
+		<title>jake.PackageTask | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"></meta>
+		<meta name="mobileoptimized" content="0"></meta>
+	
+		<link rel="stylesheet" href="../css/all.css" media="all"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld"></link>
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)"></link>
+
+		<script src="../javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="index">
+	<div class="menu">
+		<div class="indexLinks">
+			<a href="../index.html">Classes</a>
+			<a href="../files.html">Files</a>
+		</div>
+	
+		<h2 class="heading1">Classes</h2>
+		
+		<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+		
+		<nav>
+			<ul class="classList" id="ClassList">
+				
+					<li><a href="../symbols/_global_.html">_global_</a></li>
+				
+					<li><a href="../symbols/jake.html">jake</a></li>
+				
+					<li><a href="../symbols/jake.DirectoryTask.html">jake<span class='break'> </span>.<span class='break'> </span>DirectoryTask</a></li>
+				
+					<li><a href="../symbols/jake.FileTask.html">jake<span class='break'> </span>.<span class='break'> </span>FileTask</a></li>
+				
+					<li><a href="../symbols/jake.PackageTask.html">jake<span class='break'> </span>.<span class='break'> </span>PackageTask</a></li>
+				
+					<li><a href="../symbols/jake.Task.html">jake<span class='break'> </span>.<span class='break'> </span>Task</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />
+		Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
+		Generated on: 2012-2-6 12:12
+	</div>
+</div>
+
+<div class="index indexStatic"></div>
+
+<div class="content">
+	<div class="innerContent">
+		<h1 class="classTitle">
+			
+			Class <span>jake.PackageTask</span>
+		</h1>
+		
+		<div class="intro">
+			<p class="description summary">
+				
+			</p>
+				
+			
+				<ul class="summary">
+					
+					
+					
+						<li>Defined in: <a href="../symbols/src/lib_package_task.js.html">package_task.js</a></li>
+					
+						
+				</ul>
+			
+		</div>
+		
+		
+			<div class="props">
+				<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class jake.PackageTask.">
+					<caption class="sectionTitle">Class Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Constructor Attributes</th>
+							<th scope="col">Constructor Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription" >
+								<div class="fixedFont">
+									<b><a href="../symbols/jake.PackageTask.html#constructor">jake.PackageTask</a></b>(name, version, definition)
+								</div>
+								<div class="description">Instantiating a PackageTask creates a number of Jake
+  Tasks that make packaging and distributing your software easy.</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+		
+		
+			
+			
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class jake.PackageTask.">
+						<caption class="sectionTitle">Field Summary</caption>
+						
+						<thead>
+							<tr>
+								<th scope="col">Field Attributes</th>
+								<th scope="col">Field Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#archiveChangeDir">archiveChangeDir</a></b>
+										</div>
+										<div class="description">Equivalent to the '-C' command for the `tar` and `jar`
+    commands.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#archiveContentDir">archiveContentDir</a></b>
+										</div>
+										<div class="description">Specifies the files and directories to include in the
+    package-archive.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#jarCommand">jarCommand</a></b>
+										</div>
+										<div class="description">The shell-command to use for creating jar archives.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#manifestFile">manifestFile</a></b>
+										</div>
+										<div class="description">Can be set to point the `jar` utility at a manifest
+    file to use in a .jar archive.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#name">name</a></b>
+										</div>
+										<div class="description">The name of the project</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#needJar">needJar</a></b>
+										</div>
+										<div class="description">If set to true, uses the `jar` utility to create
+    a .jar archive of the pagckage</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#needTar">needTar</a></b>
+										</div>
+										<div class="description">If set to true, uses the `tar` utility to create
+    a gzip .tgz archive of the pagckage</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#needTarBz2">needTarBz2</a></b>
+										</div>
+										<div class="description">If set to true, uses the `tar` utility to create
+    a bzip2 .bz2 archive of the pagckage</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#needZip">needZip</a></b>
+										</div>
+										<div class="description">If set to true, uses the `zip` utility to create
+    a .zip archive of the pagckage</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#packageFiles">packageFiles</a></b>
+										</div>
+										<div class="description">The list of files and directories to include in the
+    package-archive</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#tarCommand">tarCommand</a></b>
+										</div>
+										<div class="description">The shell-command to use for creating tar archives.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#version">version</a></b>
+										</div>
+										<div class="description">The project version-string</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/jake.PackageTask.html#zipCommand">zipCommand</a></b>
+										</div>
+										<div class="description">The shell-command to use for creating zip archives.</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			
+			
+			
+		
+<!--
+#### METHODS SUMMARY
+-->
+		
+		
+<!--
+#### EVENTS SUMMARY
+-->
+		
+<!--
+#### CONSTRUCTOR DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle" id="constructor">
+						Class Detail
+					</h2>
+					
+					<div class="fixedFont">
+						<b>jake.PackageTask</b>(name, version, definition)
+					</div>
+					
+					<div class="description">
+						Instantiating a PackageTask creates a number of Jake
+  Tasks that make packaging and distributing your software easy.
+						
+					</div>
+					
+					
+						
+							<pre class="code">  var t = new jake.PackageTask('rous', 'v' + version, function () {
+    var files = [
+      'Capfile'
+    , 'Jakefile'
+    , 'README.md'
+    , 'package.json'
+    , 'app/*'
+    , 'bin/*'
+    , 'config/*'
+    , 'lib/*'
+    , 'node_modules/*'
+    ];
+    this.packageFiles.include(files);
+    this.packageFiles.exclude('node_modules/foobar');
+    this.needTarGz = true;
+  });</pre>
+						
+					
+				
+					
+						<dl class="detailList params">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span>  <b>name</b>
+									
+								</dt>
+								<dd>The name of the project</dd>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span>  <b>version</b>
+									
+								</dt>
+								<dd>The current project version (will be
+  appended to the project-name in the package-archive</dd>
+							
+								<dt>
+									<span class="light fixedFont">{Function}</span>  <b>definition</b>
+									
+								</dt>
+								<dd>Defines the contents of the package,
+  and format of the package-archive. Will be executed on the instantiated
+  PackageTask (i.e., 'this', will be the PackageTask instance),
+  to set the various instance-propertiess.</dd>
+							
+						</dl>
+					
+					
+					
+				</div>
+			</div>
+		
+<!--
+#### FIELD DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Field Detail
+					</h2>
+					
+					
+						<div class="fixedFont heading" id="archiveChangeDir">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>archiveChangeDir</b>							
+						</div>
+						
+						<div class="description">
+							Equivalent to the '-C' command for the `tar` and `jar`
+    commands. ("Change to this directory before adding files.")
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="archiveContentDir">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>archiveContentDir</b>							
+						</div>
+						
+						<div class="description">
+							Specifies the files and directories to include in the
+    package-archive. If unset, this will default to the main package
+    directory -- i.e., name + version.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="jarCommand">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>jarCommand</b>							
+						</div>
+						
+						<div class="description">
+							The shell-command to use for creating jar archives.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="manifestFile">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>manifestFile</b>							
+						</div>
+						
+						<div class="description">
+							Can be set to point the `jar` utility at a manifest
+    file to use in a .jar archive. If unset, one will be automatically
+    created by the `jar` utility. This path should be relative to the
+    root of the package directory (this.packageDir above, likely 'pkg')
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="name">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>name</b>							
+						</div>
+						
+						<div class="description">
+							The name of the project
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="needJar">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>needJar</b>							
+						</div>
+						
+						<div class="description">
+							If set to true, uses the `jar` utility to create
+    a .jar archive of the pagckage
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="needTar">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>needTar</b>							
+						</div>
+						
+						<div class="description">
+							If set to true, uses the `tar` utility to create
+    a gzip .tgz archive of the pagckage
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="needTarBz2">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>needTarBz2</b>							
+						</div>
+						
+						<div class="description">
+							If set to true, uses the `tar` utility to create
+    a bzip2 .bz2 archive of the pagckage
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="needZip">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>needZip</b>							
+						</div>
+						
+						<div class="description">
+							If set to true, uses the `zip` utility to create
+    a .zip archive of the pagckage
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="packageFiles">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>packageFiles</b>							
+						</div>
+						
+						<div class="description">
+							The list of files and directories to include in the
+    package-archive
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="tarCommand">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>tarCommand</b>							
+						</div>
+						
+						<div class="description">
+							The shell-command to use for creating tar archives.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="version">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>version</b>							
+						</div>
+						
+						<div class="description">
+							The project version-string
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="zipCommand">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>zipCommand</b>							
+						</div>
+						
+						<div class="description">
+							The shell-command to use for creating zip archives.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						
+					
+				</div>
+			</div>
+		
+<!--
+#### METHOD DETAILS
+-->		
+		
+		
+<!--
+#### EVENT DETAILS
+-->		
+		
+	</div>
+</div>
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660)
+			codeview.classFilter.Init()
+		</script>
+	</body>
+</html>
+
